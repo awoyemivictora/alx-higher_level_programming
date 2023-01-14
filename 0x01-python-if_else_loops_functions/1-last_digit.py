@@ -2,6 +2,7 @@
 import random
 number = random.randint(-10000, 10000)
 
+
 def lastDigit(number):
     return number % 10
 
