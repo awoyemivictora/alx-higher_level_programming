@@ -1,5 +1,8 @@
 #!/usr/bin/python3
-for char in range(ord("a"), ord("z") + 1):
-	if chr(char) == 'e' or chr(char) == 'q':
-		continue
-	print("{:c}".format(char), end='')
+
+for i in range(97, 123):
+    if i == 101:
+        continue
+    if i == 113:
+        continue
+    print(chr(i).format(i), end="")
