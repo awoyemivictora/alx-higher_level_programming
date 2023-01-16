@@ -8,4 +8,4 @@ def uppercase(str):
         print("best")
         print("Best School 98 Battery street")
     else:
-        return False
+        continue
