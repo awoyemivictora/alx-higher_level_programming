@@ -8,4 +8,5 @@ def uppercase(str):
         if ord(i) >= 97 and ord(i) <= 122:
             x = ord(i) - 32
             y = chr(x)
-            return y
+print('best")
+print("Best School 98 Battery street")
