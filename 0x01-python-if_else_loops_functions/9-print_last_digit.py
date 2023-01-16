@@ -6,7 +6,7 @@ def print_last_digit(number):
     return number % 10
 
 
-print_last_digit(abs(98))
-print_last_digit(abs(0))
+print_last_digit(98)
+print_last_digit(0)
 r = print_last_digit(abs(-1024))
 print(r)
