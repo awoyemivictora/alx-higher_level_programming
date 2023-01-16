@@ -1,8 +1,8 @@
 #!/usr/bin/python3
+uppercase = __import__('8-uppercase').uppercase
 
 
 def uppercase(str):
-    uppercase = __import__('8-uppercase').uppercase
 
     if (str == uppercase):
         print("best".format(str))
