@@ -5,6 +5,7 @@ def islower(c):
     islower = __import__('7-islower').islower
 
     if(islower is True):
+        print("a is {}".format("lower" if islower("A") else "upper"))
         print("H is {}".format("lower" if islower("H") else "upper"))
         print("A is {}".format("lower" if islower("A") else "upper"))
         print("3 is {}".format("lower" if islower("3") else "upper"))
