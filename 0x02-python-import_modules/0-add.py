@@ -1,4 +1,5 @@
 #!/usr/bin/python3
 
-import add from add_0.py
+from add_0 import add
 
+add(1, 2)
