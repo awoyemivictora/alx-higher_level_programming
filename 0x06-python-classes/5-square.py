@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-
 """Square class to represent a square"""
 
 
@@ -65,4 +64,4 @@ class Square:
             print()
         else:
             for i in range(self.__size):
-                print("#:" * self.__size)
+                print("#" * self.__size)
