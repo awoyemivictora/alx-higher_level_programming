@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-
 """Square class to represent a square"""
+
 
 class Square:
     """
@@ -27,15 +27,12 @@ class Square:
         self.position = position
         self.size = size
 
-
     @property
     def size(self) -> int:
         """
         Retrieve the instance attribute size
-
         :return: the size of the square
         """
-
         return self.__size
 
     @property
@@ -45,10 +42,8 @@ class Square:
 
         :return: the position (x, y)
         """
-
         return self.__position
 
-    
     @size.setter
     def size(self, value: int) -> None:
         """
@@ -82,7 +77,6 @@ class Square:
 
         self.__position = value
 
-
     def area(self) -> int:
         """
         Calculates and returns the area of the square
@@ -96,7 +90,6 @@ class Square:
         """
         Print to the stdout '#' * size
         """
-        
         if self.__size == 0:
             print()
         else:
