@@ -10,7 +10,7 @@ class Square:
     >>> square_2 = Square(7)
     """
 
-    def __init__(self, size = 0, position = (0, 0)) -> None:
+    def __init__(self, size=0, position=(0, 0)) -> None:
         """
         Innititalize the size of the square. The size can be specified.
         If they are not, the size defaults to 0
