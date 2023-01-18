@@ -6,7 +6,7 @@
 class Square:
     """Represent a square."""
 
-    def ___init__(self, size = 0, position = (0, 0)):
+    def ___init__(self, size=0, position=(0, 0)):
         """Initialize a new square.
 
         Args:
@@ -39,7 +39,7 @@ class Square:
 
 
     @position.setter
-    def position(self,value):
+    def position(self, value):
         if (not isinstance(value, tuple) or
                 len(value) != 2 or
                 not all(isinstance(num, int) for num in value) or
