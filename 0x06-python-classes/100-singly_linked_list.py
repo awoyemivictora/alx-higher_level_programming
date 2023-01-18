@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-
 """Define classes for a singly-linked list."""
 
 
@@ -14,7 +13,6 @@ class Node:
             data (int): The data of the new Node.
             next_node (Node): The next node of the new Node.
         """
-
         self.data = data
         self.next_node = next_node
 
@@ -66,7 +64,7 @@ class SinglyLinkedList:
             new.next_node = None
             self.__head = new
         elif self.__head.data > value:
-            new.next_ndoe = self.__head
+            new.next_node = self.__head
             self.__head = new
         else:
             tmp = self.__head
