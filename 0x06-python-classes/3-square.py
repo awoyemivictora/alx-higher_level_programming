@@ -3,7 +3,6 @@
 """Square class to represent a square"""
 
 
-
 class Square:
     """
     Define a Square and its basic properties
@@ -14,9 +13,8 @@ class Square:
 
     def __init__(self, size=0) -> None:
         """
-        Innitialize the size of the square. The size can be specified. 
+        Innitialize the size of the square. The size can be specified.
         If they are not, the size defaults to 0
-
         :param size: int size of square ( > 0)
         """
 
@@ -25,9 +23,7 @@ class Square:
         elif size < 0:
             raise ValueError("size must be >= 0")
 
-
         self.__size = size
-
 
     def area(self) -> int:
         """
