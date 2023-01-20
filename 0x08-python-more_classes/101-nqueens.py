@@ -21,7 +21,6 @@ queen must be placed on the chessboard.
 import sys
 
 
-
 def init_board(n):
     """Initialize an 'n'x'n' sized chessboard with 0's."""
     board = []
@@ -70,7 +69,7 @@ def xout(board, row, col):
     for r in range(row + 1, len(board)):
         board[r][col] = "x"
     # X out all spots above
-    for r in range(row -1, -1, -1):
+    for r in range(row - 1, -1, -1):
         board[r][col] = "x"
     # X out all spots diagonally down to the right
     c = col + 1
@@ -122,7 +121,8 @@ def recursive_solve(board, row, queens, solutions):
             tmp_board = board_deepcopy(board)
             tmp_board[row][c] = "Q"
             xout(tmp_board, row, c)
-            solutions = recursive_solve(tmp_board, row + 1, queens + 1, solutions)
+            solutions = recursive_solve(tmp_board, row + 1,
+                                        queens + 1, solutions)
     return (solutions)
 
 
@@ -141,4 +141,3 @@ if __name__ == "__main__":
     solutions = recursive_solve(board, 0, 0, [])
     for sol in solutions:
         print(sol)
-    
