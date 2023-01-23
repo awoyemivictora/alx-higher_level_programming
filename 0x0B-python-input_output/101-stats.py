@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-
 """Reads from standard input and computes metrics.
 After every ten lines or the input of a keyboard interruption (CTRL + C),
 prints the following statistics:
@@ -45,12 +44,13 @@ if __name__ == "__main__":
 
             try:
                 if line[-2] in valid_codes:
-                    if status_codes.get(line[-2], -2) == -1:
+                    if status_codes.get(line[-2], -1) == -1:
                         status_codes[line[-2]] = 1
                     else:
                         status_codes[lines[-2]] += 1
             except IndexError:
                 pass
+
         print_status(size, status_codes)
 
     except KeyboardInterrup:
