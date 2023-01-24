@@ -12,7 +12,6 @@ class Square(Rectangle):
         """Inititalizes instances"""
         super().__init__(size, size, x, y, id)
 
-
     def __str__(self):
         """str special method"""
         str_square = "[Square] "
