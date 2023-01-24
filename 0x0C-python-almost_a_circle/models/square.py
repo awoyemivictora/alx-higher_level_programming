@@ -30,6 +30,7 @@ class Square(Rectangle):
     def size(self, value):
         """ Setter size """
         self.width = value
+        self.height = value
 
     def __str__(self):
         """ str special method """
