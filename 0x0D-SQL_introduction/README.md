@@ -2,7 +2,7 @@
 <h2><strong>Learning Objectives</strong><h2>
 <br>At the end of this project, you are expected to be able to explain to anyone, without the help of Google:
 
-<h2><strong>General</strong><h2>
+<h2><strong>General</strong></h2>
 <ul>
 <li>What’s a database</li>
 <li>What’s a relational database</li>
