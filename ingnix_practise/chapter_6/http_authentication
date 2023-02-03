@@ -1,0 +1,6 @@
+# Problem - You need to secure your applcation or content via HTTP Basic Authentication.
+
+# comment
+name1:password1
+name2:password2:comment
+name3:password3

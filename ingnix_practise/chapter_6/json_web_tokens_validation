@@ -1,0 +1,6 @@
+# Problem - You want to validate JSON Web Tokens with NGINX Plus.
+
+location /private/ {
+	auth_jwt "Google Oauth" token=$cookie_auth_token;
+	auth_jwt_key_file /etc/nginx/google_certs.jwk;
+}

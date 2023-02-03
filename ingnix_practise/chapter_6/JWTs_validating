@@ -1,0 +1,6 @@
+# Problem - You need to validate a JWT before the request is handled with NGINX Plus.
+
+location /api/ {
+	auth_jwt	  "api";
+	auth_jwt_key_file conf/keys.json;
+}
