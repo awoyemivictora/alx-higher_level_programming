@@ -1,0 +1,14 @@
+# Problem - You need to preemptively push content to the client.
+
+server {
+	listen 443 ssl http2 default_server;
+	
+	ssl_certificate		server.crt;
+	ssl_certificate_key	server.key;
+	root /usr/share/nginx/html;
+
+	location = /demo.html {
+		http2_push /style.css;
+		http2_push /image1.jpg;
+	}
+}

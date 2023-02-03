@@ -1,0 +1,9 @@
+# Problem - You want to take advantage of HTTP/2
+
+server {
+	listen 443 ssl http2 default_server;
+
+	ssl_certificate		server.crt;
+	ssl_certificate_key	server.key;
+	# ...
+}
