@@ -1,0 +1,7 @@
+# Problem - You need to support Adobe's HTTP Dynamic Streaming (HDS) that has already been fragmented and separated from the metadata.
+
+location /video/ {
+	alias /var/www/transformed_video;
+	f4f;
+	f4f_buffer_size 512k;
+}

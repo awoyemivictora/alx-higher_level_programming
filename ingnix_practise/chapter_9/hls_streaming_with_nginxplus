@@ -1,0 +1,14 @@
+# Problem - You need to support HTTP Live Streaming (HLS) for H.264/AAC-encoded content packaged in MP4 files.
+
+location /hls/ {
+	hls; 	# Use the HLS hanlder to manage requests
+
+	# Serve content from the following location
+	alias /var/www/video;
+
+	# HLS parameters
+	hls_fragment		4s;
+	hls_buffers	    10 10m;
+	hls_mp4_buffer_size	1m;
+	hls_mp4_max_buffer_size	5m;
+}

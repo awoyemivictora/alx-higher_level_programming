@@ -1,0 +1,7 @@
+# Problem - You need to limit bandwidth to downstream media streaming clients without affecting the viewing experience.
+
+location /video/ {
+	mp4;
+	mp4_limit_rate_after 15s;
+	mp4_limit_rate 1.2;
+}
