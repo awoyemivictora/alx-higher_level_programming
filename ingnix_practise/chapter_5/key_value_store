@@ -1,0 +1,24 @@
+# Problem - You need NGINX Plus to make dynamic traffic management decisions based on input from applications.
+# Solution - Setup the cluster-aware key-value store and API, and then add keys and values
+
+keyval_zone zone=blocklist:1M;
+keyval $remote_addr $blocked zone=blocklist;
+
+server {
+	# ...
+	location / {
+		if ($blocked) {
+			return 403 'Forbidden';
+		}
+		return 200 'OK';
+	}
+}
+server {
+	# ...
+	# Directives limiting access to the API
+	# See chapter 6
+	
+	location /api {
+		api write=on;
+	}
+}

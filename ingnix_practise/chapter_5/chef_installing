@@ -1,0 +1,19 @@
+# Problem - You need to install and configure NGINX with Chef to manage NGINX configurations as code adn conform with the rest of your Chef configurations.
+
+package 'nginx' do
+	action :install
+end
+
+service 'nginx' do
+	supports :status => true, :restart => true, :reload => true
+	action	[ :start, :enable ]
+end
+
+template 'nginx.conf' do
+	path "/etc/nginx.conf"
+	source "/nginx.conf.erb"
+	owner 'root'
+	group 'root'
+	mode '0644'
+	notifies :reload, 'service[nginx]', :delayed
+end

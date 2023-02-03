@@ -1,0 +1,19 @@
+# Problem - You need to install and configure NGINX with Puppet to manage NGINX configurations as code and conform with the rest of your Puppet configurations.
+
+class nginx {
+	package {"nginx": ensure => 'installed',}
+	service {"nginx":
+		ensure => 'true',
+		hasrestart => 'true',
+		restart => '/etc/init.d/nginx reload',
+	}
+	file { "nginx.conf":
+		path    => '/etc/nginx/nginx.conf,
+		require => Package['nginx'],
+		notify  => Service['nginx'],
+		content => template('nginx/templates/nginx.conf.erb'),
+		user=>'root',
+		group=>'root',
+		mode='0644';
+	}
+}
