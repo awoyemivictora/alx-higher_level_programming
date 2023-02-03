@@ -1,0 +1,31 @@
+# Problem - You're serving resources from another domain and need to allow cross-origin resource sharing  (CORS) to enable browsers to utilize these resources.
+
+map $request_method $cors_method {
+	OPTIONS 11;
+	GET 1;
+	POST 1;
+	defualt 0;
+}
+server {
+	# ...
+	location / {
+		if ($cors_method - '1') {
+			add_header 'Access-Control-Allow-Methods'
+				'GET,POST,OPTIONS';
+			add_header 'Access-Control-Allow-Headers'
+				'DNT,
+				 Keep-Alive,
+				 User-Agent,
+				 X-Requested-With,
+				 If-Modified-Since,
+				 Cache-Control,
+				 Content-Type';
+		}
+		if ($cors_method = '11') {
+			add_header = 'Access-Control-Max-Age' 1728000;
+			add_header = 'Content-Type' 'text/plain; charse=UTF=8';
+			add_header = 'Content-Length' 0;
+			return 204;
+		}
+	}
+}

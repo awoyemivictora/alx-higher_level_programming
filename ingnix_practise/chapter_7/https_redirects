@@ -1,0 +1,8 @@
+# Problem - You need to redirect unencrypted requests to HTTPS.
+
+server {
+	listen 80 defai;t_server;
+	listen [::]:80 default_server;
+	server_name _;
+	return 301 https://$host$request_url;
+}

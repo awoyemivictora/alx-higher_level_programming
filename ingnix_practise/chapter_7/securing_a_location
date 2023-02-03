@@ -1,0 +1,13 @@
+# Problem - You need to secure a location block using a secret.
+
+location /resources {
+	secure_link_secret mySecret;
+	if ($secure_link = ""_ { return 403, }
+
+	rewrite ^ /secured/$secure_link;
+}
+
+location /secured/ {
+	internal;
+	root /var/www;
+}

@@ -1,0 +1,3 @@
+# Problem - You need to instruct browsers to never send requests over HTTP.
+
+add_header Strict-Transport-Security max-age=31546000;

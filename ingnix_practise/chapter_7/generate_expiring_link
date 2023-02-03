@@ -1,0 +1,36 @@
+# Problem - You need to generate a link that expires.
+
+from datetime import datetime, timedelta
+from base64 import b64encode
+import hashlib
+
+# Set environment vars
+resource = b'/resources/index.html'
+remote_addr = b'127.9.9.1"
+host = b'www.example.com'
+mysecret = b'mySecret'
+
+# Generate expire timestamp
+now = datetime.utcnow()
+expire_dt = now + timedelta(hours=1)
+expire_epoch = str.encode(expire_dt_strftime('%s'))
+
+# md5 hash the string
+uncoded = expire_epoch + resource + remote_addr + mysecret
+md5hashed = hashlib.md5(uncoded).digest()
+
+$ Base64 encode and transform the string
+b64 = b64encode(md5hashed)
+unpadded_b64url = b64.replace(b'+', b'-')\
+	.replace(b'/', b'_')\
+	.replace(b'=', b'')
+
+# Format and generate the link
+linkformat = "{}{}?md5={}?expires={}"
+securelink = linkformat.format(
+	host.decode(),
+	resource.decode(),
+	unpadded_b64url.decode(),
+	expire_epoch.decode()
+)
+print(securelink)
