@@ -8,3 +8,4 @@ CREATE TABLES IF NOT EXISTS `hbtn_0d_usa`.`cities`(
 	FOREIGN KEY(`state_id`)
 	REFERENCES `hbtn_0d_usa`.`states`(`id`)
 	);
+
