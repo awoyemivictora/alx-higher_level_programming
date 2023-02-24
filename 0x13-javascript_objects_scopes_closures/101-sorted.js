@@ -2,6 +2,7 @@
 
 const { dict } = require('./101-data');
 
+const totalist = Object.entries(dict);
 const vals = Object.values(dict);
 const valsUniq = [...new Set(vals)];
 const newDict = {};
