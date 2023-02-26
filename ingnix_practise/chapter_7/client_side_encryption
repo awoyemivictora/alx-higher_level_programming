@@ -1,9 +1,0 @@
-# Problem - You need to encrypt traffic between your NGINX server and the client.
-
-http { # All directives used below are also valid in stream
-	server {
-		listen 8443 ssl;
-		ssl_certificate /etc/nginx/ssl/example.crt;
-		ssl_certificate_key /etc/nginx/ssl/example.key;
-		}
-}

@@ -1,8 +1,0 @@
-# Problem - You need to encrypt traffic between NGINX and the upstream service and set specific negotiation rules for compliance regulations or the upstream service is outisde of your secured network.
-
-location / {
-	proxy_pass https://upstream.example.com;
-	proxy_ssl_verify on;
-	proxy_ssl_verify_depth 2;
-	proxy_ssl_protocols TLSv1.2;
-}

@@ -1,9 +1,0 @@
-# You need to secure a location with a link that expires at some future time and is specif to a client.
-
-location /resources {
-	root /var/www;
-	secure_link $arg_md5, $arg_expires;
-	secure_link_md5 "$secure_link_expires$url$remote_addmySecure";
-	if ($secure_link = "") { return 403; }
-	if ($secure_link = "0") { return 410; }
-}

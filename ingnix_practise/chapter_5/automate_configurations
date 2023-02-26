@@ -1,8 +1,0 @@
-# Problem - You need to automate your NGINX configuration to respond to changes in your environment through use of Consul.
-
-upstream backend { {{range service "app.backend"}}
-	server {{.Address}};{{end}}
-}
-
-# consul-template -consul consul.example.internal -template \
-template:/etc/nginx/conf.d/upstream.conf:"nginx -s reload"

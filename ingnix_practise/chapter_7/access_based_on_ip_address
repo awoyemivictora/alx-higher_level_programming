@@ -1,8 +1,0 @@
-# Problem - You need to control access based on the IP address of the client.
-
-location /admin/ {
-	deny 10.0.0.1;
-	allow 10.0.0.0/20;
-	allow 2001.0db8::/32;
-	deny all;
-}
